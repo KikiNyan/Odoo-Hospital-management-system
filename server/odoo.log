@@ -1,0 +1,73 @@
+2024-01-28 02:56:20,302 15512 INFO ? odoo: Odoo version 15.0-20240120 
+2024-01-28 02:56:20,303 15512 INFO ? odoo: Using configuration file at C:\odoo\odoo15\server\odoo.conf 
+2024-01-28 02:56:20,303 15512 INFO ? odoo: addons paths: ['C:\\odoo\\odoo15\\server\\odoo\\addons', 'c:\\users\\ryanf\\appdata\\local\\openerp s.a\\odoo\\addons\\15.0', 'c:\\odoo\\odoo15\\server\\odoo\\addons'] 
+2024-01-28 02:56:20,303 15512 INFO ? odoo: database: openpg@localhost:5432 
+2024-01-28 02:56:21,671 15512 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\odoo\odoo15\thirdparty\wkhtmltopdf.exe 
+2024-01-28 02:56:22,275 15512 INFO ? odoo.service.server: Initiating shutdown 
+2024-01-28 02:56:22,275 15512 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-01-28 02:56:23,548 15140 INFO ? odoo: Odoo version 15.0-20240120 
+2024-01-28 02:56:23,548 15140 INFO ? odoo: Using configuration file at C:\odoo\odoo15\server\odoo.conf 
+2024-01-28 02:56:23,548 15140 INFO ? odoo: addons paths: ['C:\\odoo\\odoo15\\server\\odoo\\addons', 'c:\\users\\ryanf\\appdata\\local\\openerp s.a\\odoo\\addons\\15.0', 'c:\\odoo\\odoo15\\server\\odoo\\addons'] 
+2024-01-28 02:56:23,548 15140 INFO ? odoo: database: openpg@localhost:5432 
+2024-01-28 02:56:23,676 15140 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\odoo\odoo15\thirdparty\wkhtmltopdf.exe 
+2024-01-28 02:56:23,863 15140 INFO ? odoo.service.server: HTTP service (werkzeug) running on Desktop-6UDSX:8069 
+2024-01-28 02:56:27,973 15140 INFO ? odoo.sql_db: Connection to the database failed 
+2024-01-28 02:56:32,063 15140 INFO ? odoo.sql_db: Connection to the database failed 
+2024-01-28 03:16:52,212 9652 INFO ? odoo: Odoo version 15.0-20240120 
+2024-01-28 03:16:52,213 9652 INFO ? odoo: Using configuration file at C:\odoo\odoo15\conf\odoo.conf 
+2024-01-28 03:16:52,213 9652 INFO ? odoo: addons paths: ['C:\\odoo\\odoo15\\server\\odoo\\addons', 'c:\\users\\ryanf\\appdata\\local\\openerp s.a\\odoo\\addons\\15.0', 'c:\\odoo\\odoo15\\custom_modules', 'c:\\odoo\\odoo15\\server\\addons', 'c:\\odoo\\odoo15\\server\\odoo\\addons'] 
+2024-01-28 03:16:52,213 9652 INFO ? odoo: database: odoo15@localhost:5433 
+2024-01-28 03:16:53,296 9652 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\odoo\odoo15\thirdparty\wkhtmltopdf.exe 
+2024-01-28 03:16:53,495 9652 INFO ? odoo.service.server: HTTP service (werkzeug) running on Desktop-6UDSX:8069 
+2024-01-28 03:17:06,261 15140 INFO ? odoo.http: HTTP Configuring static files 
+2024-01-28 03:17:10,374 15140 INFO ? odoo.sql_db: Connection to the database failed 
+2024-01-28 03:17:10,374 15140 INFO ? odoo.http: Generating nondb routing 
+2024-01-28 03:17:10,388 15140 INFO ? werkzeug: 127.0.0.1 - - [28/Jan/2024 03:17:10] "GET / HTTP/1.1" 303 - 0 0.000 4.118
+2024-01-28 03:17:14,504 15140 INFO ? odoo.sql_db: Connection to the database failed 
+2024-01-28 03:17:18,603 15140 INFO ? odoo.sql_db: Connection to the database failed 
+2024-01-28 03:17:18,605 15140 INFO ? werkzeug: 127.0.0.1 - - [28/Jan/2024 03:17:18] "GET /web HTTP/1.1" 303 - 0 0.000 8.205
+2024-01-28 03:17:22,730 15140 INFO ? odoo.sql_db: Connection to the database failed 
+2024-01-28 03:17:27,291 15140 INFO ? odoo.sql_db: Connection to the database failed 
+2024-01-28 03:17:27,333 15140 INFO ? werkzeug: 127.0.0.1 - - [28/Jan/2024 03:17:27] "GET /web/database/selector HTTP/1.1" 200 - 0 0.000 8.726
+2024-01-28 03:17:59,008 15140 INFO ? odoo.sql_db: Connection to the database failed 
+2024-01-28 03:18:03,554 15140 INFO ? odoo.sql_db: Connection to the database failed 
+2024-01-28 03:18:03,576 15140 INFO ? werkzeug: 127.0.0.1 - - [28/Jan/2024 03:18:03] "GET /web/database/selector HTTP/1.1" 200 - 0 0.000 8.648
+2024-01-28 03:22:08,683 15140 INFO ? odoo.sql_db: Connection to the database failed 
+2024-01-28 03:22:13,218 15140 INFO ? odoo.sql_db: Connection to the database failed 
+2024-01-28 03:22:13,240 15140 INFO ? werkzeug: 127.0.0.1 - - [28/Jan/2024 03:22:13] "GET /web/database/selector HTTP/1.1" 200 - 0 0.000 8.680
+2024-01-28 03:22:24,464 15140 INFO ? odoo.sql_db: Connection to the database failed 
+2024-01-28 03:22:29,009 15140 INFO ? odoo.sql_db: Connection to the database failed 
+2024-01-28 03:22:29,031 15140 INFO ? werkzeug: 127.0.0.1 - - [28/Jan/2024 03:22:29] "GET /web/database/selector HTTP/1.1" 200 - 0 0.000 8.673
+2024-01-28 03:22:38,972 15140 INFO ? odoo.service.server: Initiating shutdown 
+2024-01-28 03:22:38,972 15140 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-01-28 03:22:40,059 15140 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 0 connections  
+2024-01-28 03:25:33,093 9980 INFO ? odoo: Odoo version 15.0-20240120 
+2024-01-28 03:25:33,093 9980 INFO ? odoo: Using configuration file at C:\odoo\odoo15\server\odoo.conf 
+2024-01-28 03:25:33,093 9980 INFO ? odoo: addons paths: ['C:\\odoo\\odoo15\\server\\odoo\\addons', 'c:\\users\\ryanf\\appdata\\local\\openerp s.a\\odoo\\addons\\15.0', 'c:\\odoo\\odoo15\\server\\odoo\\addons', 'c:\\odoo\\odoo15\\custom_modules'] 
+2024-01-28 03:25:33,094 9980 INFO ? odoo: database: odoo15@localhost:5433 
+2024-01-28 03:25:33,214 9980 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\odoo\odoo15\thirdparty\wkhtmltopdf.exe 
+2024-01-28 03:25:33,395 9980 INFO ? odoo.service.server: HTTP service (werkzeug) running on Desktop-6UDSX:8069 
+2024-01-28 03:25:35,653 9980 INFO ? odoo.service.server: Initiating shutdown 
+2024-01-28 03:25:35,654 9980 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-01-28 03:25:35,949 9980 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-01-28 03:25:45,034 1880 INFO ? odoo: Odoo version 15.0-20240120 
+2024-01-28 03:25:45,034 1880 INFO ? odoo: Using configuration file at C:\odoo\odoo15\conf\odoo.conf 
+2024-01-28 03:25:45,034 1880 INFO ? odoo: addons paths: ['C:\\odoo\\odoo15\\server\\odoo\\addons', 'c:\\users\\ryanf\\appdata\\local\\openerp s.a\\odoo\\addons\\15.0', 'c:\\odoo\\odoo15\\server\\odoo\\custom_modules', 'c:\\odoo\\odoo15\\server\\odoo\\addons'] 
+2024-01-28 03:25:45,034 1880 INFO ? odoo: database: odoo15@localhost:5433 
+2024-01-28 03:25:45,160 1880 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\odoo\odoo15\thirdparty\wkhtmltopdf.exe 
+2024-01-28 03:25:45,340 1880 INFO ? odoo.service.server: HTTP service (werkzeug) running on Desktop-6UDSX:8069 
+2024-01-28 03:25:47,268 1880 INFO ? odoo.http: HTTP Configuring static files 
+2024-01-28 03:25:47,317 1880 INFO odoo15 odoo.modules.loading: loading 1 modules... 
+2024-01-28 03:25:47,323 1880 INFO odoo15 odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2024-01-28 03:25:47,329 1880 INFO odoo15 odoo.modules.loading: loading 7 modules... 
+2024-01-28 03:25:47,378 1880 INFO odoo15 odoo.modules.loading: 7 modules loaded in 0.05s, 0 queries (+0 extra) 
+2024-01-28 03:25:47,408 1880 INFO odoo15 odoo.modules.loading: Modules loaded. 
+2024-01-28 03:25:47,410 1880 INFO odoo15 odoo.modules.registry: Registry loaded in 0.133s 
+2024-01-28 03:25:47,411 1880 INFO odoo15 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-01-28 03:25:47,808 1880 INFO odoo15 werkzeug: 127.0.0.1 - - [28/Jan/2024 03:25:47] "GET /web HTTP/1.1" 200 - 179 0.078 0.454
+2024-01-28 03:25:47,975 1880 INFO odoo15 werkzeug: 127.0.0.1 - - [28/Jan/2024 03:25:47] "POST /web/action/load HTTP/1.1" 200 - 28 0.013 0.024
+2024-01-28 03:25:48,346 1880 INFO odoo15 werkzeug: 127.0.0.1 - - [28/Jan/2024 03:25:48] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 17 0.005 0.049
+2024-01-28 03:25:48,353 1880 INFO odoo15 werkzeug: 127.0.0.1 - - [28/Jan/2024 03:25:48] "GET /web/image/res.company/1/favicon HTTP/1.1" 200 - 11 0.019 0.058
+2024-01-28 03:25:48,398 1880 INFO odoo15 werkzeug: 127.0.0.1 - - [28/Jan/2024 03:25:48] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 58 0.042 0.079
+2024-01-28 03:25:48,736 1880 INFO odoo15 werkzeug: 127.0.0.1 - - [28/Jan/2024 03:25:48] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 42 0.015 0.007
+2024-01-28 03:25:48,985 1880 INFO odoo15 werkzeug: 127.0.0.1 - - [28/Jan/2024 03:25:48] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.003 0.002

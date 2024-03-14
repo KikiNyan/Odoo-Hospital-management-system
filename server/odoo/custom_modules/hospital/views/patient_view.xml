@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--##tree-->
+<!--    exportxlsx disable option to download export file-->
+<record id="view_hospital_patient_tree" model="ir.ui.view">
+    <field name="name">hospital.patient.tree</field>
+    <field name="model">hospital.patient</field>
+    <field name="arch" type="xml">
+        <tree string="hospital management" export_xlsx="0">
+            <field name="name" string="patient name"/>
+            <field name="age"/>
+            <field name="gender"/>
+            <field name="reference"/>
+        </tree>
+    </field>
+</record>
+
+<record id="view_hospital_patient_form" model="ir.ui.view">
+    <field name="name">hospital.patient.form</field>
+    <field name="model">hospital.patient</field>
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+              <field name="is_birthday" invisible="1"/> <!-- Add this line -->
+                <div class="alert alert-info text-center o_form_header" role="alert" attrs="{'invisible': [('is_birthday', '=',False)]}">
+                    <a class="close" data-dismiss="alert" href="#">x</a>
+                    <div>
+                        <strong>Today is birthday!!!!!!!!!!</strong>
+                    </div>
+                    <div>Wish
+                        <field name="name" readonly="1"/>
+                    </div>
+                </div>
+                <field name="image" widget="image" class="oe_avatar"/>
+                <div class="oe_title">
+                    <h4>
+                        <field name="reference" readonly="1"/>
+                    </h4>
+                    <h4>
+                        <!-- Label used to hide field name -->
+                        <label for="name" string="Name" class="oe_edit_only"/>
+                        <label for="name" class="oe_read_only">Name</label>
+                        <field name="name"/>
+                    </h4>
+                </div>
+                <group>
+                    <group>
+                        <field name="date_of_birth"/>
+                        <field name="age" avg="Average age"/>
+                        <field name="appointment_id"/>
+                        <field name="appointment_count" sum="Total Appoinment"/>
+                    </group>
+                    <group>
+                        <field name="gender" widget="radio"/>
+                        <field name="tag_ids" widget="many2many_checkboxes" options="{'color_field':'color'}"/>
+                        <field name="active"/>
+                        <field name="phone"/>
+                    </group>
+                    <group>
+                        <field name="parent" attrs="{'invisible':[('age', '>', 18), ('gender', '=', 'male')]}"/>
+                        <field name="marital_status" attrs="{'invisible':[('age', '&lt;=', 18)]}"/>
+                        <field name="partner_name" attrs="{'readonly': [('marital_status', '!=', 'married')]}"/>
+                    </group>
+                </group>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" group="base.group_user"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+            </div>
+        </form>
+    </field>
+</record>
+
+<record id="view_hospital_patient_search" model="ir.ui.view">
+    <field name="name">hospital.patient.search</field>
+    <field name="model">hospital.patient</field>
+    <field name="arch" type="xml">
+        <search>
+            <field name="name" string="Patient name" filter_domain="[
+                '|',
+                ('name', 'ilike', self), ('reference', 'ilike', self)]"/>
+            <field name="reference"/>
+            <field name="age"/>
+            <field name="gender"/>
+            <filter name="filter_male" string="Male" domain="[('gender', '=', 'male')]"/>
+            <filter name="filter_female" string="Female" domain="[('gender', '=', 'female')]"/>
+            <searchpanel>
+                <field name="gender" icon="fa-users" select="multi" enable_counters="1"/>
+            </searchpanel>
+        </search>
+    </field>
+</record>
+
+<!--##module-->
+    <record id="action_hospital_patient" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.patient</field>
+        <field name="view_mode">tree,form</field>
+
+        <field name="context">{'search_default_filter_male': 1 , 'search_default_group_by_gender': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first patient
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_patient"
+              name="Patient"
+              action="action_hospital_patient"
+              parent="menu_patient_master"
+              sequence="0"/>
+
+
+</odoo>
+<!--<record id="view_hospital_patient_tree" model="ir.ui.view">-->
+<!--        <field name="name">hospital.patient.tree</field>-->
+<!--        <field name="model">hospital.patient</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <tree string="hospital management" export_xlsx="0">-->
+<!--                <field name="name" string="patient name"/>-->
+<!--                <field name="age"/>-->
+<!--                <field name="gender"/>-->
+<!--                 <field name="reference"/>-->
+<!--            </tree>-->
+<!--        </field>-->
+<!--    </record>-->
+
+<!--&lt;!&ndash;    ##form&ndash;&gt;-->
+<!--    <record id="view_hospital_patient_form" model="ir.ui.view">-->
+<!--        <field name="name">hospital.patient.form</field>-->
+<!--        <field name="model">hospital.patient</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form>-->
+<!--                <sheet>-->
+<!--                     <field name="image" widget="image" class="oe_avatar"/>-->
+<!--                       <div class="oe_title">-->
+<!--                    <h4>-->
+<!--                          <field name="reference" readonly="1"/>-->
+<!--                    </h4>-->
+<!--                    <h4>-->
+<!--&lt;!&ndash;                        label use to hide field name&ndash;&gt;-->
+<!--                        <label for="name" string="Name" class="oe_edit_only"/>-->
+<!--                        <label for="name" class="oe_read_only">Name</label>-->
+<!--                        <field name="name"/>-->
+<!--                    </h4>-->
+
+
+<!--                </div>-->
+<!--                    <group>-->
+<!--                        <group>-->
+
+
+<!--                               <field name="date_of_birth"/>-->
+
+<!--                            <field name="age"/>-->
+<!--                            <field name="appointment_id"/>-->
+<!--                            <field name="appointment_count"/>-->
+
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="gender"/>-->
+<!--                            <field name="tag_ids" widget="many2many_tags" options="{'color_field':'color'}"/>-->
+<!--                            <field name="active"  />-->
+<!--                        </group>-->
+
+<!--                        <group>-->
+<!--                            <field name="parent" attrs="{'invisible':[('age', '>', 18), ('gender', '=', 'male')]}"/>-->
+<!--&lt;!&ndash;                            <field name="marital_status" />&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="partner_name" attrs="{'invisible': [('marital_status', '=', 'single')]}"/>&ndash;&gt;-->
+<!--                             <field name="marital_status" attrs="{'invisible':[('age', '&lt;=', 18)]}" />-->
+<!--                            <field name="partner_name" attrs="{'readonly': [('marital_status', '!=', 'married')]},-->
+<!--                            {'required': [('marital_status', '=', 'married')]}"/>-->
+
+<!--                        </group>-->
+<!--                    </group>-->
+<!--                </sheet>-->
+<!--                <div class="oe_chatter">-->
+<!--                    <field name="message_follower_ids" group="base.group_user"/>-->
+<!--                    <field name="activity_ids"/>-->
+<!--                    <field name="message_ids" />-->
+<!--                </div>-->
+
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
+<!--&lt;!&ndash;##search&ndash;&gt;-->
+<!--    <record id="view_hospital_patient_search" model="ir.ui.view">-->
+<!--        <field name="name">hospital.patient.search</field>-->
+<!--        <field name="model">hospital.patient</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <search>-->
+<!--                <field name="name" string="Patient name" filter_domain="[-->
+<!--                        '|',-->
+<!--                        ('name', 'ilike', self), ('reference', 'ilike', self)]"/>-->
+
+<!--                 <field name="reference"/>-->
+<!--    <field name="age"/>-->
+<!--                <field name="gender"/>-->
+<!--                 <filter name="filter_male" string="Male" domain="[('gender', '=', 'male')]"/>-->
+<!--                  <filter name="filter_female" string="Female" domain="[('gender', '=', 'female')]"/>-->
+
+
+
+
+<!--<searchpanel>-->
+<!--                        <field name="gender" icon="fa-users" select="multi" enable_counters="1"/>-->
+<!--                    </searchpanel>-->
+<!--            </search>-->
+<!--        </field>-->
+<!--    </record>-->
